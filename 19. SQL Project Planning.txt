@@ -1,0 +1,8 @@
+set sql_mode = '';
+select Start_Date, End_Date
+from
+    (select Start_Date from Projects where Start_Date Not In (Select End_Date from Projects)) a,
+    (select End_Date from Projects where End_Date Not in (Select Start_Date from Projects)) b
+where Start_Date < End_Date
+Group by Start_Date
+order by DATEDIFF(End_Date, Start_Date), Start_Date
