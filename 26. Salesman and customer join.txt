@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to find the 
+salesperson and customer who reside in the same city. Return Salesman, 
+cust_name and city.
+
+
+Ans-->
+
+SELECT salesman.name AS "Salesman",
+customer.cust_name, customer.city 
+FROM salesman,customer 
+WHERE salesman.city=customer.city;

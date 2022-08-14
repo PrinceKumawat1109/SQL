@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to find those orders 
+where the order amount exists between 500 and 2000. Return ord_no, 
+purch_amt, cust_name, city
+
+Ans-->
+
+SELECT  a.ord_no,a.purch_amt,
+b.cust_name,b.city 
+FROM orders a,customer b 
+WHERE a.customer_id=b.customer_id 
+AND a.purch_amt BETWEEN 500 AND 2000;
