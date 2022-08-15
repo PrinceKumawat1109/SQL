@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to find the salesperson(s) 
+and the customer(s) he represents. Return Customer Name, city, Salesman, 
+commission.
+
+Ans-->
+
+select a.cust_name as "Customer Name",
+a.city, b.name as "Salesman", b.commision
+from customer a 
+inner join salesman b
+on a.salesman_id=b.salesman_id;
