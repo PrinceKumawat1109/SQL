@@ -1,0 +1,13 @@
+Q. From the following tables write a SQL query to find those customers 
+with a grade less than 300. Return cust_name, customer city, grade, Salesman, 
+salesmancity. The result should be ordered by ascending customer_id.
+
+Ans-->
+
+SELECT a.cust_name,a.city,a.grade, 
+b.name AS "Salesman", b.city 
+FROM customer a 
+LEFT OUTER JOIN salesman b 
+ON a.salesman_id=b.salesman_id 
+WHERE a.grade<300 
+ORDER BY a.customer_id;

@@ -1,0 +1,12 @@
+Q. From the following tables write a SQL query to display the customer 
+name, customer city, grade, salesman, salesman city. The results should 
+be sorted by ascending customer_id.
+
+Ans-->
+
+SELECT a.cust_name,a.city,a.grade, 
+b.name AS "Salesman",b.city 
+FROM customer a 
+LEFT JOIN salesman b 
+ON a.salesman_id=b.salesman_id 
+order by a.customer_id;
