@@ -1,0 +1,15 @@
+Q. From the following tables write a SQL query to list all salespersons along with customer name, 
+city, grade, order number, date, and amount. Condition for selecting list of salesmen : 1. Salesmen 
+who works for one or more customer or, 2. Salesmen who not yet join under any customer, Condition for
+ selecting list of customer : 3. placed one or more orders, or 4. no order placed to their salesman.
+
+Ans-->
+
+SELECT a.cust_name,a.city,a.grade, 
+b.name AS "Salesman", 
+c.ord_no, c.ord_date, c.purch_amt 
+FROM customer a 
+RIGHT OUTER JOIN salesman b 
+ON b.salesman_id=a.salesman_id 
+RIGHT OUTER JOIN orders c 
+ON c.customer_id=a.customer_id;
