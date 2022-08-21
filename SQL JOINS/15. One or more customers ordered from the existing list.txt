@@ -1,0 +1,11 @@
+Q. Write a SQL statement to generate a list of all the salesmen who either work for one or more customers 
+or have yet to join any of them. The customer may have placed one or more orders at or above order amount 
+2000, and must have a grade, or he may not have placed any orders to the associated supplier.
+
+Ans-->
+
+SELECT a.cust_name,a.city, b.ord_no,
+b.ord_date,b.purch_amt AS "Order Amount" 
+FROM customer a 
+LEFT OUTER JOIN orders b 
+ON a.customer_id=b.customer_id;
