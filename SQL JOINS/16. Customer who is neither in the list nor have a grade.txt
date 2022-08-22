@@ -1,0 +1,13 @@
+Q. Write a SQL statement to generate a report with the customer name, city, 
+order no. order date, purchase amount for only those customers on the list 
+who must have a grade and placed one or more orders or which order(s) have 
+been placed by the customer who neither is on the list nor has a grade.
+
+Ans-->
+
+SELECT a.cust_name,a.city, b.ord_no,
+b.ord_date,b.purch_amt AS "Order Amount" 
+FROM customer a 
+FULL OUTER JOIN orders b 
+ON a.customer_id=b.customer_id 
+WHERE a.grade IS NOT NULL;

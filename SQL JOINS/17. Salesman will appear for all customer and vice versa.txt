@@ -1,0 +1,8 @@
+Q. Write a SQL query to combine each row of the salesman table with each 
+row of the customer table.
+
+Ans-->
+
+SELECT * 
+FROM salesman a 
+CROSS JOIN customer b;
