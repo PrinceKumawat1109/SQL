@@ -1,0 +1,12 @@
+Q. Write a SQL statement to create a Cartesian product between salesperson 
+and customer, i.e. each salesperson will appear for every customer and vice 
+versa for those salesmen who belong to a city and customers who require a 
+grade.
+
+Ans-->
+
+SELECT * 
+FROM salesman a 
+CROSS JOIN  customer b 
+WHERE a.city IS NOT NULL 
+AND b.grade IS NOT NULL;
