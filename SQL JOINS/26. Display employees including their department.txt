@@ -1,0 +1,10 @@
+Q. From the following tables write a SQL query to display all the data of 
+employees including their department.
+
+Ans-->
+
+SELECT emp_idno, A.emp_fname AS "First Name", emp_lname AS "Last Name",
+    B.dpt_name AS "Department", emp_dept, dpt_code,  dpt_allotment
+     FROM emp_details A 
+      INNER JOIN emp_department B
+        ON A.emp_dept = B.dpt_code;
