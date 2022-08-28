@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to find the departments with 
+budgets more than Rs. 50000 and display the first name and last name of 
+employees.
+
+Ans-->
+
+SELECT emp_details.emp_fname AS "First Name", emp_lname AS "Last Name"
+  FROM emp_details 
+    INNER JOIN emp_department
+        ON emp_details.emp_dept = emp_department.dpt_code
+    AND emp_department.dpt_allotment > 50000;
