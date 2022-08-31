@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to count the number of 
+customers. Return number of customers.
+
+
+Ans-->
+
+SELECT COUNT(*) 
+FROM customer;
