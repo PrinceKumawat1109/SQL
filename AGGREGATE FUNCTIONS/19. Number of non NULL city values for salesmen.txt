@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to count the number of 
+salespeople in a city. Return number of salespeople.
+
+
+Ans-->
+
+SELECT COUNT(*) 
+FROM salesman 
+WHERE city IS NOT NULL;
+
