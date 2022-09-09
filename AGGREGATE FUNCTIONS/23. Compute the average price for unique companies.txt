@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to compute the average price 
+for unique companies. Return average price and company id.
+
+Ans-->
+
+SELECT AVG(pro_price) AS "Average Price", 
+       pro_com AS "Company ID"
+    FROM item_mast
+GROUP BY pro_com;
+
+
