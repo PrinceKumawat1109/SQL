@@ -6,4 +6,3 @@ Ans-->
 SELECT city,MAX(grade) 
 FROM customer 
 GROUP BY city;
-
