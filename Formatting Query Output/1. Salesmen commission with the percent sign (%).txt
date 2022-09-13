@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to select all the salespeople. 
+Return salesman_id, name, city, commission with the percent sign (%).
+
+Ans-->
+
+SELECT salesman_id,name,city,'%',commission*100 
+FROM salesman;
