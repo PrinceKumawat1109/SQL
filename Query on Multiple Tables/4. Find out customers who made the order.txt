@@ -1,0 +1,7 @@
+Q. From the following tables, write a SQL query to locate the orders made by customers. Return order number, customer name.
+
+Ans-->
+
+SELECT orders.ord_no, customer.cust_name
+FROM orders, customer
+WHERE orders.customer_id = customer.customer_id; 
