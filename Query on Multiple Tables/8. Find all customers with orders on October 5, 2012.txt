@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find those customers who 
+placed orders on October 5, 2012. Return customer_id, cust_name, city, grade, 
+salesman_id, ord_no, purch_amt, ord_date, customer_id and salesman_id.
+
+Ans-->
+
+SELECT *
+FROM customer a,orders  b 
+WHERE a.customer_id=b.customer_id 
+AND b.ord_date='2012-10-05';
