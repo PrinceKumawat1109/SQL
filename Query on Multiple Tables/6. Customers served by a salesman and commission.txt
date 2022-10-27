@@ -1,0 +1,15 @@
+Q. From the following table, write a SQL query to find those customers who 
+are served by a salesperson and the salesperson earns commission in the 
+range of 12% to 14% (Begin and end values are included.). Return cust_name
+ AS "Customer", city AS "City".
+
+Ans-->
+
+SELECT customer.cust_name AS "Customer",
+customer.city AS "City",
+salesman.name AS "Salesman",
+salesman.commission
+FROM customer,salesman
+WHERE customer.salesman_id = salesman.salesman_id
+AND salesman.commission
+BETWEEN .12 AND .14;
