@@ -1,0 +1,11 @@
+Q.From the following tables write a SQL query to determine the commission of the salespeople in Paris. Return commission.
+
+Ans-->
+
+SELECT commission
+FROM salesman
+WHERE salesman_id IN
+    (SELECT salesman_id 
+     FROM customer
+     WHERE city = 'Paris');
+
