@@ -1,0 +1,11 @@
+Q. Write a query to display all the customers whose ID is 2001 below the 
+salesperson ID of Mc Lyon.
+
+Ans-->
+
+SELECT *
+FROM customer
+WHERE customer_id =
+    (SELECT salesman_id -2001
+     FROM salesman
+     WHERE name = 'Mc Lyon');

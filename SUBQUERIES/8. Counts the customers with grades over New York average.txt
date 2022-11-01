@@ -1,0 +1,13 @@
+Q. From the following tables write a SQL query to count the number of 
+customers with grades above the average in New York City. Return grade
+ and count.
+
+Ans-->
+ 
+SELECT grade, COUNT (*)
+FROM customer
+GROUP BY grade
+HAVING grade >
+    (SELECT AVG(grade)
+     FROM customer
+     WHERE city = 'New York');
