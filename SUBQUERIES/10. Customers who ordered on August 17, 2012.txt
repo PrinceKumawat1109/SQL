@@ -1,0 +1,10 @@
+Q. From the following tables write SQL query to find the customers who placed 
+orders on 17th August 2012. Return ord_no, purch_amt, ord_date, customer_id, 
+salesman_id and cust_name.
+
+Ans-->
+
+SELECT b.*, a.cust_name
+FROM orders b, customer a
+WHERE a.customer_id=b.customer_id
+AND b.ord_date='2012-08-17';
