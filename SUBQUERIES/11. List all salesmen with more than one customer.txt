@@ -1,0 +1,12 @@
+Q.From the following tables write a SQL query to find salespeople who had 
+more than one customer. Return salesman_id and name.
+
+Ans-->
+
+
+SELECT salesman_id,name 
+FROM salesman a 
+WHERE 1 < 
+    (SELECT COUNT(*) 
+     FROM customer 
+     WHERE salesman_id=a.salesman_id);

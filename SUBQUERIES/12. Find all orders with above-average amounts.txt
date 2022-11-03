@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to find those orders, which 
+are higher than the average amount of the orders. Return ord_no, purch_amt, 
+ord_date, customer_id and salesman_id.
+
+Ans-->
+
+SELECT * 
+FROM orders a
+WHERE purch_amt >
+    (SELECT AVG(purch_amt) FROM orders b 
+     WHERE b.customer_id = a.customer_id);
