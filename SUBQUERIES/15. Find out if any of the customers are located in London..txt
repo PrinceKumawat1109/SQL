@@ -1,0 +1,11 @@
+Q.Write a query to extract all data from the customer table if and only if 
+one or more of the customers in the customer table are located in London.
+
+Ans-->
+
+SELECT customer_id,cust_name, city
+FROM customer
+WHERE EXISTS
+   (SELECT *
+    FROM customer 
+    WHERE city='London');

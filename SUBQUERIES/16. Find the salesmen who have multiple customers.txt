@@ -1,0 +1,15 @@
+Q . From the following tables write a SQL query to find salespeople who deal 
+with multiple customers. Return salesman_id, name, city and commission.
+
+Ans-->
+
+SELECT * 
+FROM salesman 
+WHERE salesman_id IN (
+   SELECT DISTINCT salesman_id 
+   FROM customer a 
+   WHERE EXISTS (
+      SELECT * 
+      FROM customer b 
+      WHERE b.salesman_id=a.salesman_id 
+      AND b.cust_name<>a.cust_name));
