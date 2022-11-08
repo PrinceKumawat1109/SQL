@@ -1,0 +1,12 @@
+Q. From the following table write a SQL query to find all those orders whose
+ order amount exceeds at least one of the orders placed on September 
+10th 2012. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
+
+Ans-->
+
+SELECT *
+FROM Orders
+WHERE purch_amt > ANY
+   (SELECT purch_amt
+	FROM orders
+	WHERE  ord_date='2012/09/10');
