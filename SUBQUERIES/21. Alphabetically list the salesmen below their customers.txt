@@ -1,0 +1,13 @@
+Q.  From the following tables write a SQL query to find all those salespeople 
+whose names appear alphabetically lower than the customer’s name. Return 
+salesman_id, name, city, commission.
+
+Ans-->
+
+SELECT *
+FROM salesman a
+WHERE EXISTS
+   (SELECT *
+	FROM CUSTOMER b
+	WHERE  a.name  < b.cust_name);
+

@@ -1,0 +1,13 @@
+Q. From the following table write a SQL query to find all those customers 
+with a higher grade than any customer who belongs to the alphabetically lower
+ than the city New York. Return customer_id, cust_name, city, grade, 
+salesman_id.
+
+Ans-->
+
+SELECT *
+FROM customer
+WHERE grade > ANY
+   (SELECT grade
+	FROM CUSTOMER
+	WHERE  city < 'New York');
