@@ -1,0 +1,12 @@
+Q. From the following tables write a SQL query to find all those customers who
+ have different grades than any customer who lives in Dallas City. Return 
+customer_id, cust_name,city, grade and salesman_id.
+
+Ans-->
+
+SELECT *
+FROM customer 
+WHERE NOT grade = ANY
+   (SELECT grade
+	FROM customer
+	WHERE city='Dallas');
