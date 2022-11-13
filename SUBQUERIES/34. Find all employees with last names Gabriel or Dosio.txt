@@ -1,0 +1,8 @@
+Q. From the following tables write a SQL query to find employees whose last 
+name is Gabriel or Dosio. Return emp_idno, emp_fname, emp_lname and emp_dept.
+
+Ans-->
+ 
+SELECT * 
+  FROM emp_details
+   WHERE emp_lname IN ('Gabriel' , 'Dosio');

@@ -1,0 +1,11 @@
+Q. From the following tables write a SQL query to calculate the average price 
+of each manufacturer's product along with their name. Return Average Price and
+ Company.
+
+Ans-->
+
+SELECT AVG(pro_price) AS "Average Price", 
+   company_mast.com_name As "Company"
+   FROM item_mast, company_mast
+        WHERE item_mast.pro_com= company_mast.com_id
+           GROUP BY company_mast.com_name;
