@@ -1,0 +1,13 @@
+Q. From the following tables write a SQL query to find the departments whose 
+sanction amount is higher than the average sanction amount for all departments
+. Return dpt_code, dpt_name and dpt_allotment.
+
+Ans-->
+
+SELECT *
+  FROM emp_department
+  WHERE dpt_allotment >
+  (
+    SELECT AVG(dpt_allotment)
+    FROM emp_department
+  );

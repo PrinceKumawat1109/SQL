@@ -1,0 +1,13 @@
+Q.  From the following tables write a SQL query to find which departments have
+ more than two employees. Return dpt_name.
+
+Ans-->
+
+SELECT dpt_name FROM emp_department
+  WHERE dpt_code IN
+  (
+    SELECT emp_dept
+      FROM emp_details
+      GROUP BY emp_dept
+      HAVING COUNT(*) >2
+  );
