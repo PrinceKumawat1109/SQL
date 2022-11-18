@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find those employees whose 
+last name is "McEwen". Return first name, last name and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, department_id
+ FROM employees
+  WHERE last_name = 'McEwen';

@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to identify employees who do 
+not have a department number. Return employee_id, first_name, last_name, 
+email, phone_number, hire_date, job_id, salary,commission_pct, manager_id 
+and department_id.
+
+Ans-->
+
+SELECT *
+ FROM employees
+  WHERE department_id IS NULL;
