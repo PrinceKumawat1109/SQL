@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find those employees whose first name does not contain the letter ‘M’. Sort the result-set in ascending order by department ID. Return full name (first and last name together), hire_date, salary and department_id.
+
+Ans-->
+
+SELECT first_name || ' ' || last_name as Full_Name, hire_date,  
+ salary,  department_id
+  FROM employees
+   WHERE first_name NOT LIKE '%M%'
+     ORDER BY department_id;

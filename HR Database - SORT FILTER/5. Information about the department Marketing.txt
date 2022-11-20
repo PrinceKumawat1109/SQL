@@ -1,0 +1,8 @@
+Q.  From the following table, write a SQL query to find the details of 'Marketing' department. 
+Return all fields.
+
+Ans-->
+
+SELECT *
+ FROM  departments
+  WHERE department_name = 'Marketing';
