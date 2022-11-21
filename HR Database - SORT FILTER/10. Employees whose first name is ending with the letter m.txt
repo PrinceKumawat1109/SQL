@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find the employees whose first name ends with the letter ‘m’. Return the first and last name, and salary.
+
+Ans-->
+
+SELECT first_name, last_name, salary
+ FROM employees
+  WHERE first_name LIKE '%m';

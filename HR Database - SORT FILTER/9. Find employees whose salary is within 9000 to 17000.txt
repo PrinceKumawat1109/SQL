@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find the employees whose salary is in the range 9000,17000 (Begin and end values are included). Return full name, contact details and salary.
+
+Ans-->
+
+SELECT first_name ||' '||last_name AS Full_Name,
+       phone_number ||' - '|| email AS Contact_Details,
+       salary  AS Remuneration
+         FROM employees
+           WHERE salary BETWEEN 9000 AND 17000;
