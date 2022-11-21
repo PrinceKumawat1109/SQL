@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find those employees who do 
+not earn any commission. Return full name (first and last name), and salary.
+
+Ans-->
+
+SELECT first_name ||' '||last_name AS Full_Name, salary
+ FROM  employees
+  WHERE commission_pct IS NULL;
