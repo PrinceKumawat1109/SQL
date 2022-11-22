@@ -1,0 +1,4 @@
+Q. From the following table, write a SQL query to find those employees whose salaries are not between 7000 and 15000 (Begin and end values are included). Sort the result-set in ascending order by the full name (first and last). Return full name and salary.SELECT first_name || ' ' || last_name as Name, salary
+ FROM  employees
+   WHERE salary NOT BETWEEN 7000 AND 15000
+     ORDER BY first_name || ' ' || last_name;
