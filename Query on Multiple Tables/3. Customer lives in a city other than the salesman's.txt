@@ -9,3 +9,4 @@ FROM salesman, customer, orders
 WHERE customer.city <> salesman.city
 AND orders.customer_id = customer.customer_id
 AND orders.salesman_id = salesman.salesman_id;
+
