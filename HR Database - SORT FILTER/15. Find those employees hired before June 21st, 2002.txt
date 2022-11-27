@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the employees who were 
+hired before June 21st, 2002. Return all fields.
+
+Ans-->
+
+SELECT *
+ FROM employees
+  WHERE hire_date < '2002-06-21';

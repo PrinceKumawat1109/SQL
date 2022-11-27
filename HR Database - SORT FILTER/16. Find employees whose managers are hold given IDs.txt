@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the employees whose managers hold the ID 120, 103, or 145. Return first name, last name, email, salary and manager ID.
+
+Ans-->
+
+SELECT first_name, last_name, email, 
+  salary, manager_id
+    FROM employees
+     WHERE manager_id IN (120 , 103 , 145);
