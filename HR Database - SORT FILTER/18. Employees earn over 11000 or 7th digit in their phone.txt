@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find those employees who earn above 11000 or the seventh character in their phone number is 3. Sort the result-set in descending order by first name. Return full name (first name and last name), hire date, commission percentage, email, and telephone separated by '-', and salary.
+
+Ans-->
+
+SELECT first_name ||' '||last_name AS Full_Name, hire_date , 
+  commission_pct, email ||' -  '||phone_number AS Contact_Details, salary 
+     FROM employees 
+       WHERE salary > 11000
+        OR phone_number LIKE '______3%'
+          ORDER BY first_name DESC;

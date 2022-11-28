@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find employees whose first names contain the letters D, S, or N. Sort the result-set in descending order by salary. Return all fields.
+
+Ans-->
+
+SELECT *
+ FROM employees
+  WHERE first_name LIKE '%D%'
+   OR first_name LIKE '%S%'
+   OR first_name LIKE '%N%'
+    ORDER BY salary DESC;
