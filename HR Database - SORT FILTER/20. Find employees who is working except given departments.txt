@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find those employees work in the departments that are not part of the department 50 or 30 or 80. Return employee_id, first_name,job_id, department_id.
+
+Ans-->
+
+SELECT employee_id, first_name, job_id, department_id
+ FROM employees
+  WHERE department_id NOT IN (50, 30, 80);
