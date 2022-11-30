@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the employees whose department numbers are included in 30, 40, or 90. Return employee id, first name, job id, department id.
+
+
+Ans-->
+
+SELECT employee_id, first_name, job_id, department_id
+ FROM employees
+  WHERE department_id IN (30 , 40 , 90);

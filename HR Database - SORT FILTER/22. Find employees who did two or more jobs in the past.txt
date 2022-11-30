@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find those employees who worked more than two jobs in the past. Return employee id.
+
+Ans-->
+
+SELECT employee_id 
+	FROM job_history 
+		GROUP BY employee_id 
+			HAVING COUNT(*) >=2;
