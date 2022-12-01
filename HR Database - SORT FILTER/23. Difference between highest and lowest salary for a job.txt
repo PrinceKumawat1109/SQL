@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to count the number of employees, the sum of all salary, and difference between the highest salary and lowest salaries by each job id. Return job_id, count, sum, salary_difference.
+
+Ans-->
+
+SELECT job_id, COUNT(*), SUM(salary), 
+	MAX(salary)-MIN(salary) AS salary_difference 
+		FROM employees 
+			GROUP BY job_id;

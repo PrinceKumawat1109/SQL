@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find each job ids where two or more employees worked for more than 300 days. Return job id.
+
+Ans-->
+
+SELECT job_id 
+	FROM job_history 
+		WHERE end_date-start_date >300 
+			GROUP BY job_id 
+				HAVING COUNT(*)>=2;
