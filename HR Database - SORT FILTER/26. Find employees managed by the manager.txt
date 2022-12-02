@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to count the number of employees worked under each manager. Return manager ID and number of employees.
+
+
+Ans-->
+
+SELECT manager_id, COUNT(*) 
+	FROM employees 
+		GROUP BY manager_id;

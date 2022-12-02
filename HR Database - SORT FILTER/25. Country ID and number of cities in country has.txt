@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to count the number of cities in each country. Return country ID and number of cities.
+
+Ans-->
+
+SELECT country_id,  COUNT(*)  
+	FROM locations 
+		GROUP BY country_id;
