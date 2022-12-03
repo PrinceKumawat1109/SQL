@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find all those employees who are either Sales Representatives or Salesmen. Return first name, last name and hire date.
+
+Ans-->
+
+SELECT first_name, last_name, hire_date
+	FROM employees 
+		WHERE job_id IN ('SA_REP', 'SA_MAN');

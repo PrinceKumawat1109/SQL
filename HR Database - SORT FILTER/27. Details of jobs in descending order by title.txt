@@ -1,0 +1,6 @@
+Q. From the following table, write a SQL query to find all jobs. Sort the result-set in descending order by job title. Return all fields.
+Ans-->
+
+SELECT * 
+	FROM jobs 
+		ORDER BY job_title DESC;
