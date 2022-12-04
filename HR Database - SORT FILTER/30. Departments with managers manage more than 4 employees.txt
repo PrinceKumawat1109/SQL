@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the departments where any manager manages four or more employees. Return department_id.
+
+Ans-->
+
+SELECT DISTINCT department_id
+	FROM employees
+		GROUP BY department_id, manager_id 
+			HAVING COUNT(employee_id) >=4;

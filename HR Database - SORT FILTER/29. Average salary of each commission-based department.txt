@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to calculate the average salary of employees who receive a commission percentage for each department. Return department id, average salary.
+
+Ans-->
+
+SELECT department_id, AVG(salary) 
+	FROM employees 
+		WHERE commission_pct IS NOT NULL 
+			GROUP BY department_id;
