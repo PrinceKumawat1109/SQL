@@ -1,0 +1,11 @@
+Q.From the following table, write a SQL query to find those employees who have completed their previous jobs. Return employee ID, end_date.
+
+Ans-->
+
+SELECT employee_id , MAX(end_date)
+FROM job_history
+WHERE employee_id IN (SELECT employee_id
+FROM job_history
+GROUP BY 1
+HAVING COUNT(employee_id) > 1)
+GROUP BY 1

@@ -1,0 +1,9 @@
+Q.  From the following table, write a SQL query to find the departments where more than ten employees receive commissions. Return department id.
+
+Ans-->
+
+SELECT department_id 
+	FROM employees 
+		WHERE commission_pct IS NOT NULL
+			GROUP BY department_id 
+				HAVING COUNT(commission_pct)>10;
