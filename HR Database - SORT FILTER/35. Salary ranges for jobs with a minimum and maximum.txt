@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find those job titles where maximum salary falls between 12000 and 18000 (Begin and end values are included.). Return job_title, max_salary-min_salary.
+
+Ans-->
+
+SELECT job_title, max_salary-min_salary AS salary_differences 
+	FROM jobs 
+		WHERE max_salary BETWEEN 12000 AND 18000;

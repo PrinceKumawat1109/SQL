@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the employees whose first or last name begins with 'D'. Return first name, last name.
+
+Ans-->
+
+SELECT first_name, last_name 
+	FROM employees 
+		WHERE  first_name  LIKE 'D%' 
+			OR last_name LIKE 'D%';
