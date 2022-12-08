@@ -6,3 +6,4 @@ Ans-->
 SELECT first_name ||' '||last_name AS Full_Name, salary
  FROM  employees
   WHERE commission_pct IS NULL;
+
