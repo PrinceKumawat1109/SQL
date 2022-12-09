@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find those employees who joined after 7th September 1987. Return all the fields.
+
+Ans-->
+
+SELECT * 
+ FROM employees  
+   WHERE hire_date > '1987-09-07';

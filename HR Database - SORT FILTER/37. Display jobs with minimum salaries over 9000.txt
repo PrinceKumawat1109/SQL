@@ -1,0 +1,7 @@
+Q. From the following table, write a SQL query to find details of those jobs where the minimum salary exceeds 9000. Return all the fields of jobs.
+
+Ans-->
+
+SELECT * 
+ FROM jobs 
+  WHERE min_salary > 9000;
