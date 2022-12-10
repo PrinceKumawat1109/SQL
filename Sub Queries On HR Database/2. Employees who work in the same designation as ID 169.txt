@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to find out which employees have the same designation as the employee whose ID is 169. Return first name, last name, department ID and job ID.
+
+Ans-->
+
+SELECT first_name, last_name, salary, department_id, job_id 
+FROM employees 
+WHERE job_id =  
+( SELECT job_id  
+FROM employees  
+WHERE employee_id=169
+);
