@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find those employees who earn more than the average salary. Return employee ID, first name, last name.
+
+Ans-->
+
+SELECT employee_id, first_name,last_name  
+FROM employees  
+WHERE salary >  
+( SELECT AVG(salary)  
+FROM employees 
+);

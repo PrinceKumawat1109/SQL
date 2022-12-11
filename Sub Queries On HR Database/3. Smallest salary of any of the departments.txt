@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to find those employees whose salary matches the lowest salary of any of the departments. Return first name, last name and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, salary, department_id  
+FROM employees  
+WHERE salary IN  
+( SELECT MIN(salary)  
+FROM employees  
+GROUP BY department_id 
+);
