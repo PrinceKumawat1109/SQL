@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to find those employees who report to that manager whose first name is ‘Payam’. Return first name, last name, employee ID and salary.
+
+Ans-->
+
+SELECT first_name, last_name, employee_id, salary  
+FROM employees  
+WHERE manager_id = 
+(SELECT employee_id  
+FROM employees  
+WHERE first_name = 'Payam' 
+);

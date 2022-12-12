@@ -1,0 +1,8 @@
+Q. From the following tables, write a SQL query to find all those employees who work in the Finance department. Return department ID, name (first name), job ID and department name.
+
+Ans-->
+
+SELECT e.department_id, e.first_name, e.job_id , d.department_name  
+FROM employees e , departments d  
+WHERE e.department_id = d.department_id  
+AND  d.department_name = 'Finance';
