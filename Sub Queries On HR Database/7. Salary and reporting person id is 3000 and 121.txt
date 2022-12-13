@@ -1,0 +1,8 @@
+Q. From the following table, write a SQL query to find the employee whose salary is 3000 and reporting person’s ID is 121. Return all fields.
+
+Ans-->
+
+SELECT * 
+FROM employees 
+WHERE (salary,manager_id)=
+(SELECT 3000,121);

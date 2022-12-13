@@ -1,0 +1,6 @@
+Q. From the following table, write a SQL query to find those employees whose ID matches any of the numbers 134, 159 and 183. Return all the fields.
+
+Ans-->
+SELECT * 
+FROM employees 
+WHERE employee_id IN (134,159,183);
