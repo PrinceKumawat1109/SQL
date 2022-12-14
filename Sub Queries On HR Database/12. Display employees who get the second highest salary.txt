@@ -1,0 +1,16 @@
+Q. From the following table, write a SQL query to find those employees who get second-highest salary. Return all the fields of the employees.
+
+
+Ans-->
+
+SELECT * 
+FROM employees 
+WHERE employee_id IN 
+(SELECT employee_id 
+FROM employees  
+WHERE salary = 
+(SELECT MAX(salary) 
+FROM employees 
+WHERE salary < 
+(SELECT MAX(salary) 
+FROM employees)));

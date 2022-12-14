@@ -1,0 +1,10 @@
+Q. From the following tables, write a SQL query to find those employees who do not work in the departments where managers’ IDs are between 100 and 200 (Begin and end values are included.). Return all the fields of the employees.
+
+Ans-->
+
+SELECT * 
+FROM employees 
+WHERE department_id NOT IN 
+(SELECT department_id 
+FROM departments 
+WHERE manager_id BETWEEN 100 AND 200);
