@@ -1,0 +1,9 @@
+Q. From the following table and write a SQL query to find those employees whose salary falls within the range of the smallest salary and 2500. Return all the fields.
+
+Ans-->
+
+SELECT * 
+FROM employees 
+WHERE salary BETWEEN  
+(SELECT MIN(salary) 
+FROM employees) AND 2500;

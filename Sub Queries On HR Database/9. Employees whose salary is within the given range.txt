@@ -1,0 +1,6 @@
+Q. From the following table, write a SQL query to find those employees whose salary is in the range of 1000, and 3000 (Begin and end values have included.). Return all the fields.
+
+Ans-->
+
+SELECT * FROM employees 
+WHERE salary BETWEEN 1000 and 3000;
