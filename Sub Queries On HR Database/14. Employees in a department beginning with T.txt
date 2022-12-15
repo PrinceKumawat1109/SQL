@@ -1,0 +1,11 @@
+Q. From the following tables, write a SQL query to find those employees who work in a department where the employee’s first name contains the letter 'T'. Return employee ID, first name and last name.
+
+
+Ans-->
+
+SELECT employee_id, first_name, last_name  
+FROM employees  
+WHERE department_id IN  
+( SELECT department_id  
+FROM employees  
+WHERE first_name LIKE '%T%' );
