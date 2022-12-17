@@ -1,0 +1,13 @@
+Q. From the following tables, write a SQL query to find those employees who earn more than the average salary and work in the same department as an employee whose first name contains the letter 'J'. Return employee ID, first name and salary.
+
+Ans-->
+
+SELECT employee_id, first_name , salary  
+FROM employees  
+WHERE salary > 
+(SELECT AVG (salary)  
+FROM employees ) 
+AND  department_id IN 
+( SELECT department_id  
+FROM employees  
+WHERE first_name LIKE '%J%');

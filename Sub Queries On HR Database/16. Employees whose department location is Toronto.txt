@@ -1,0 +1,13 @@
+Q. From the following table, write a SQL query to find those employees whose department is located at ‘Toronto’. Return first name, last name, employee ID, job ID.
+
+Ans-->
+
+SELECT  first_name, last_name, employee_id, job_id  
+FROM employees  
+WHERE department_id = 
+(SELECT department_id  
+FROM departments 
+WHERE location_id = 
+(SELECT location_id 
+FROM locations  
+WHERE city ='Toronto'));
