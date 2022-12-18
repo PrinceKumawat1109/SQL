@@ -1,0 +1,11 @@
+Q.From the following table, write a SQL query to find those employees whose salary is lower than that of employees whose job title is "MK_MAN". Exclude employees of Job title ‘MK_MAN’. Return employee ID, first name, last name, job ID.
+
+Ans-->
+
+SELECT employee_id,first_name,last_name, job_id 
+FROM employees 
+WHERE salary < ANY 
+( SELECT salary 
+FROM employees 
+WHERE job_id = 'MK_MAN' ) 
+AND job_id <> 'MK_MAN';
