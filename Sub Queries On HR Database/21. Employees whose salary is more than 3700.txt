@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to check whether there are any employees with salaries exceeding 3700. Return first name, last name and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, department_id 
+FROM employees 
+WHERE EXISTS 
+(SELECT * 
+FROM employees 
+WHERE salary >3700 );

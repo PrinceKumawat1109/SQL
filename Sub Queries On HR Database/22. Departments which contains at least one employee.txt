@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to calculate total salary of the departments where at least one employee works. Return department ID, total salary.
+
+Ans-->
+
+SELECT departments.department_id, result1.total_amt 
+FROM departments,  
+( SELECT employees.department_id, SUM(employees.salary) total_amt  
+FROM employees  
+GROUP BY department_id) result1 
+WHERE result1.department_id = departments.department_id;
