@@ -1,0 +1,11 @@
+Q. Write a query to display the employee id, name ( first name and last name ) and the job id column with a modified title SALESMAN for those employees whose job title is ST_MAN and DEVELOPER for whose job title is IT_PROG.
+
+Ans-->
+
+SELECT  employee_id,  first_name, last_name,  
+CASE job_id  
+WHEN 'ST_MAN' THEN 'SALESMAN'  
+WHEN 'IT_PROG' THEN 'DEVELOPER'  
+ELSE job_id  
+END AS designation,  salary 
+FROM employees;
