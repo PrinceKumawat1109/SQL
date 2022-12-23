@@ -1,0 +1,13 @@
+Q. Write a query to display the employee id, name ( first name and last name ), SalaryDrawn, AvgCompare (salary - the average salary of all employees) and the SalaryStatus column with a title HIGH and LOW respectively for those employees whose salary is more than and less than the average salary of all employees.
+
+
+Ans-->
+
+SELECT  employee_id,  first_name, last_name,  salary AS SalaryDrawn,  
+ROUND((salary -(SELECT AVG(salary) FROM employees)),2) AS AvgCompare,  
+CASE  WHEN salary >= 
+(SELECT AVG(salary) 
+FROM employees) THEN 'HIGH'  
+ELSE 'LOW'  
+END AS SalaryStatus 
+FROM employees;

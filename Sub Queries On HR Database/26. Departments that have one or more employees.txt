@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find all those departments where at least one employee is employed. Return department name.
+
+Ans-->
+
+SELECT  department_name 
+FROM departments 
+WHERE department_id IN 
+(SELECT DISTINCT(department_id) 
+FROM employees);
