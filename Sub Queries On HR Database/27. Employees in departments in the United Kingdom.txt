@@ -1,0 +1,17 @@
+Q. From the following tables, write a SQL query to find employees who work in departments located in the United Kingdom. Return first name.
+
+
+Ans-->
+
+SELECT first_name 
+FROM employees 
+WHERE department_id IN 
+(SELECT department_id 
+FROM departments 
+WHERE location_id IN 
+(SELECT location_id 
+FROM locations 
+WHERE country_id = 
+(SELECT country_id 
+FROM countries 
+WHERE country_name='United Kingdom')));

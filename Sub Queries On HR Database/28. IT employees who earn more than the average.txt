@@ -1,0 +1,13 @@
+Q. From the following table, write a SQL query to find out which employees are earning more than the average salary and who work in any of the IT departments. Return last name.
+
+Ans-->
+
+SELECT last_name 
+FROM employees 
+WHERE department_id IN 
+(SELECT department_id 
+FROM departments 
+WHERE department_name LIKE 'IT%') 
+AND salary > 
+(SELECT avg(salary) 
+FROM employees);
