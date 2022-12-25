@@ -1,0 +1,8 @@
+Q. From the following tables, write a SQL query to find those employees who are managers. Return all the fields of employees table.
+
+Ans-->
+
+SELECT * 
+FROM employees 
+WHERE employee_id IN 
+(SELECT DISTINCT manager_id FROM employees);
