@@ -1,0 +1,15 @@
+Q. From the following tables, write a SQL query find the employees who report to a manager based in the United States. Return first name, last name.
+
+Ans-->
+
+SELECT first_name,last_name FROM employees 
+WHERE manager_id IN 
+(SELECT employee_id 
+FROM employees 
+WHERE department_id IN 
+(SELECT department_id 
+FROM departments 
+WHERE location_id IN 
+(SELECT location_id 
+FROM locations 
+WHERE country_id='US')));

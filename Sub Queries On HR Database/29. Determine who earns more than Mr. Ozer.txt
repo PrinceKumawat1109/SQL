@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to find all those employees who earn more than an employee whose last name is 'Ozer'. Sort the result in ascending order by last name. Return first name, last name and salary.
+
+Ans-->
+
+SELECT first_name, last_name, salary 
+FROM employees 
+WHERE salary > 
+(SELECT salary 
+FROM employees 
+WHERE last_name='Ozer') 
+ORDER BY  last_name;
