@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find those employees who do not have commission percentage and have salaries between 7000, 12000 (Begin and end values are included.) and who are employed in the department number 50. Return all the fields of employees.
+
+Ans-->
+
+SELECT * 
+	FROM employees 
+		WHERE commission_pct IS NULL 
+			AND salary BETWEEN 7000 AND 12000 
+				AND department_id=50;

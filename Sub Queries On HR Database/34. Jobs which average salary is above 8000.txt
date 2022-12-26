@@ -1,0 +1,8 @@
+Q.  From the following table, write a SQL query to compute the average salary of each job ID. Exclude those records where average salary is higher than 8000. Return job ID, average salary.
+
+Ans-->
+
+SELECT job_id, AVG(salary) 
+     FROM employees 
+         GROUP BY job_id 
+               HAVING AVG(salary)>8000;
