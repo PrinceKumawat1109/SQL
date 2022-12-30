@@ -1,0 +1,12 @@
+Q. From the following tables, write a SQL query to find those departments that are located in the city of London. Return department ID, department name.
+
+Ans-->
+
+SELECT department_id, department_name 
+  FROM departments 
+    WHERE location_id = 
+            (
+              SELECT location_id 
+                FROM locations 
+                  WHERE city = 'London'
+            );
