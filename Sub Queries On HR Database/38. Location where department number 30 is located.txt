@@ -1,0 +1,11 @@
+Q. From the following table, write a SQL query to find departments for a particular location. The location matches the location of the department of ID 30. Return department name and department ID.
+
+Ans-->
+
+SELECT department_name, department_id
+  FROM departments 
+   WHERE location_id = 
+        (
+          SELECT location_id 
+            FROM  departments  
+             WHERE department_id = 30);
