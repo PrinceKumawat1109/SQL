@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find employees who work for the department in which employee ID 201 is employed. Return first name, last name, salary, and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, salary, department_id 
+ FROM employees 
+  WHERE department_id = 
+     (SELECT department_id 
+       FROM employees 
+        WHERE employee_id = 201);

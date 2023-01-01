@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find those employees whose salary matches that of the employee who works in department ID 40. Return first name, last name, salary, and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, salary, department_id 
+ FROM employees
+  WHERE salary IN (
+                   SELECT salary 
+                     FROM employees 
+                       WHERE department_id = 40);
