@@ -1,0 +1,10 @@
+Q. From the following table, write a SQL query to find those employees who work in the department 'Marketing'. Return first name, last name and department ID.
+
+Ans-->
+
+SELECT first_name, last_name, department_id 
+ FROM employees 
+   WHERE department_id = 
+       (SELECT department_id 
+          FROM departments 
+           WHERE department_name = 'Marketing');
