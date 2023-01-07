@@ -1,0 +1,16 @@
+Q. From the following tables, write a SQL query to find those departments where maximum salary is 7000 and above. The employees worked in those departments have already completed one or more jobs. Return all the fields of the departments.
+
+Ans-->
+
+SELECT *
+FROM departments
+WHERE DEPARTMENT_ID IN
+    (SELECT DEPARTMENT_ID
+     FROM employees
+     WHERE EMPLOYEE_ID IN
+         (SELECT EMPLOYEE_ID
+          FROM job_history
+          GROUP BY EMPLOYEE_ID
+          HAVING COUNT(EMPLOYEE_ID) > 1)
+     GROUP BY DEPARTMENT_ID
+     HAVING MAX(SALARY) > 7000);
