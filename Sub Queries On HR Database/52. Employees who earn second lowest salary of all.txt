@@ -1,0 +1,9 @@
+Q. From the following table, write a SQL query to find those employees who earn the second-lowest salary of all the employees. Return all the fields of employees .
+
+Ans-->
+
+SELECT *
+FROM employees m
+WHERE  2 = (SELECT COUNT(DISTINCT salary ) 
+            FROM employees
+            WHERE  salary <= m.salary);
