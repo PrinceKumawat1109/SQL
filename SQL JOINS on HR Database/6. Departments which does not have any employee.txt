@@ -1,0 +1,8 @@
+6. From the following tables, write a SQL query to find all departments, including those without employees. Return first name, last name, department ID, department name.
+
+Ans-->
+
+SELECT E.first_name, E.last_name, D.department_id, D.department_name 
+ FROM employees E 
+   RIGHT OUTER JOIN departments D
+     ON E.department_id = D.department_id;
