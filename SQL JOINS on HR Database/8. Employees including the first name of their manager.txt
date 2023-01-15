@@ -1,0 +1,9 @@
+8. From the following table, write a SQL query to find the employees and their managers. Return the first name of the employee and manager.
+
+Ans-->
+
+SELECT E.first_name AS "Employee Name", 
+   M.first_name AS "Manager"
+     FROM employees E 
+       JOIN employees M
+         ON E.manager_id = M.employee_id;
