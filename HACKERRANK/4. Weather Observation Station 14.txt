@@ -1,1 +1,3 @@
 select cast(Max(LAT_N)as decimal(9,4))from station where LAT_N<137.2345;
+
+
