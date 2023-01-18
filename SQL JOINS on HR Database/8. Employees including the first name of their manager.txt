@@ -7,3 +7,4 @@ SELECT E.first_name AS "Employee Name",
      FROM employees E 
        JOIN employees M
          ON E.manager_id = M.employee_id;
+

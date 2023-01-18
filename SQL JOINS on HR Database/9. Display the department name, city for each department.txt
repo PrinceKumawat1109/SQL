@@ -6,3 +6,4 @@ SELECT D.department_name , L.city , L.state_province
   FROM  departments D 
     JOIN locations L 
       ON  D.location_id = L.location_id;
+
