@@ -9,3 +9,5 @@ WHERE department_id =
 FROM employees  
 WHERE first_name = 'Clara')  
 AND first_name <> 'Clara';
+
+
