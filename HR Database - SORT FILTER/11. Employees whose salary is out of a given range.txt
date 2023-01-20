@@ -2,3 +2,5 @@ Q. From the following table, write a SQL query to find those employees whose sal
  FROM  employees
    WHERE salary NOT BETWEEN 7000 AND 15000
      ORDER BY first_name || ' ' || last_name;
+
+
