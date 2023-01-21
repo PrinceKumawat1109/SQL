@@ -8,3 +8,5 @@ SELECT b.*, a.cust_name
 FROM orders b, customer a
 WHERE a.customer_id=b.customer_id
 AND b.ord_date='2012-08-17';
+
+
