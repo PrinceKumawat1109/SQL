@@ -9,5 +9,3 @@ WHERE EXISTS
    (SELECT *
     FROM customer 
     WHERE city='London');
-
-
