@@ -1,0 +1,8 @@
+10. From the following tables, write a SQL query to find out which employees have or do not have a department. Return first name, last name, department ID, department name.
+
+Ans-->
+
+SELECT E.first_name, E.last_name, E.department_id, D.department_name 
+  FROM employees E 
+   LEFT OUTER JOIN departments D 
+     ON E.department_id = D.department_id;
