@@ -7,3 +7,5 @@ SELECT E.first_name, E.last_name, E.salary
    JOIN employees S
      ON E.salary < S.salary 
       AND S.employee_id = 182;
+
+
