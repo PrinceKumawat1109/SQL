@@ -1,0 +1,9 @@
+12. From the following tables, write a SQL query to find the employees who work in the same department as the employee with the last name Taylor. Return first name, last name and department ID.
+
+Ans-->
+
+SELECT E.first_name, E.last_name, E.department_id 
+ FROM employees E 
+   JOIN employees S
+     ON E.department_id = S.department_id
+       AND S.last_name = 'Taylor';

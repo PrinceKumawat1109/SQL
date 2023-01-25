@@ -1,0 +1,10 @@
+13. From the following tables, write a SQL query to find all employees who joined on or after 1st January 1993 and on or before 31 August 1997. Return job title, department name, employee name, and joining date of the job.
+
+Ans-->
+
+SELECT job_title, department_name, first_name || ' ' || last_name AS Employee_name, start_date 
+	FROM job_history 
+		JOIN jobs USING (job_id) 
+			JOIN departments USING (department_id) 
+				JOIN  employees USING (employee_id) 
+					WHERE start_date>='1993-01-01' AND start_date<='1997-08-31';
