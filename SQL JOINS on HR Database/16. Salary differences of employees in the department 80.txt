@@ -1,0 +1,9 @@
+16. From the following tables, write a SQL query to calculate the difference between the maximum salary and the salary of all the employees who work in the department of ID 80. Return job title, employee name and salary difference.
+
+Ans-->
+
+SELECT job_title, first_name || ' ' || last_name AS Employee_name, 
+	max_salary-salary AS salary_difference
+	FROM employees 
+		NATURAL JOIN jobs 
+			WHERE department_id  = 80;

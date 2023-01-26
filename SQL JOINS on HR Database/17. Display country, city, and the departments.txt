@@ -1,0 +1,8 @@
+17. From the following table, write a SQL query to find the name of the country, city, and departments, which are running there.
+
+Ans-->
+
+SELECT country_name,city, department_name 
+	FROM countries 
+		JOIN locations USING (country_id) 
+			JOIN departments USING (location_id);
