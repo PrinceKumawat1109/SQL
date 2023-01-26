@@ -1,0 +1,8 @@
+14. From the following tables, write a SQL query to calculate the difference between the maximum salary of the job and the employee's salary. Return job title, employee name, and salary difference.
+
+Ans-->
+
+SELECT job_title, first_name || ' ' || last_name AS Employee_name, 
+	max_salary-salary AS salary_difference 
+	FROM employees 
+		NATURAL JOIN jobs;

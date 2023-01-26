@@ -1,0 +1,8 @@
+15. From the following table, write a SQL query to calculate the average salary, the number of employees receiving commissions in that department. Return department name, average salary and number of employees.
+
+Ans-->
+
+SELECT department_name, AVG(salary), COUNT(commission_pct) 
+	FROM departments 
+		JOIN employees USING (department_id) 
+GROUP BY department_name;
