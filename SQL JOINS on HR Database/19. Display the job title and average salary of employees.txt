@@ -1,0 +1,8 @@
+19. From the following table, write a SQL query to calculate the average salary of employees for each job title.
+
+Ans-->
+
+SELECT job_title, AVG(salary) 
+	FROM employees 
+		NATURAL JOIN jobs 
+			GROUP BY job_title;

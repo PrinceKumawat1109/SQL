@@ -1,0 +1,8 @@
+18. From the following tables, write a SQL query to find the department name and the full name (first and last name) of the manager.
+
+Ams-->
+
+SELECT department_name, first_name || ' ' || last_name AS name_of_manager
+	FROM departments D 
+		JOIN employees E 
+			ON (D.manager_id=E.employee_id);
