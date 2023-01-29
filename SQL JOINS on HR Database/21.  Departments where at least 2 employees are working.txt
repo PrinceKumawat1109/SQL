@@ -1,0 +1,14 @@
+21. From the following tables, write a SQL query to find out which departments have at least two employees. Group the result set on country name and city. Return country name, city, and number.
+
+Ans-->
+
+SELECT country_name,city, COUNT(department_id)
+	FROM countries 
+		JOIN locations USING (country_id) 
+		JOIN departments USING (location_id) 
+WHERE department_id IN 
+    (SELECT department_id 
+		FROM employees 
+	 GROUP BY department_id 
+	 HAVING COUNT(department_id)>=2)
+GROUP BY country_name,city;

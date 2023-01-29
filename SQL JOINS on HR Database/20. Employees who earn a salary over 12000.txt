@@ -1,0 +1,9 @@
+20. From the following table, write a SQL query to find the employees who earn $12000 or more. Return employee ID, starting date, end date, job ID and department ID.
+
+Ans-->
+
+SELECT a.*
+	FROM  job_history a 
+		JOIN employees m 
+			ON (a.employee_id = m.employee_id)
+WHERE salary >= 12000;
