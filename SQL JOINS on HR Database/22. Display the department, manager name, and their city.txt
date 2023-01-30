@@ -1,0 +1,9 @@
+22. From the following tables, write a SQL query to find the department name, full name (first and last name) of the manager and their city.
+
+Ans-->
+
+SELECT department_name, first_name || ' ' || last_name AS name_of_manager, city 
+	FROM departments D 
+		JOIN employees E 
+			ON (D.manager_id=E.employee_id) 
+				JOIN locations L USING (location_id);

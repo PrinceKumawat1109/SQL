@@ -1,0 +1,8 @@
+23. From the following tables, write a SQL query to calculate the number of days worked by employees in a department of ID 80. Return employee ID, job title, number of days worked.
+
+Ans-->
+
+SELECT employee_id, job_title, end_date-start_date DAYS 
+	FROM job_history 
+		NATURAL JOIN jobs 
+			WHERE department_id=80;
