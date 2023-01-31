@@ -1,0 +1,9 @@
+24. From the following tables, write a SQL query to find full name (first and last name), and salary of all employees working in any department in the city of London.
+
+Ans-->
+
+SELECT first_name || ' ' || last_name AS Employee_name, salary
+	FROM employees 
+		JOIN departments USING (department_id) 
+		JOIN  locations USING (location_id) 
+	WHERE  city = 'London';

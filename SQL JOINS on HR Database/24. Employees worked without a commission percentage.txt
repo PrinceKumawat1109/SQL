@@ -1,0 +1,17 @@
+25. From the following tables, write a SQL query to find full name (first and last name), job title, start and end date of last jobs of employees who did not receive commissions.
+
+Ans-->
+
+
+SELECT CONCAT(e.first_name, ' ', e.last_name) AS Employee_name,
+       j.job_title,
+       h.*
+FROM employees e
+JOIN
+  (SELECT MAX(start_date),
+          MAX(end_date),
+          employee_id
+   FROM job_history
+   GROUP BY employee_id) h ON e.employee_id=h.employee_id
+JOIN jobs j ON j.job_id=e.job_id
+WHERE e.commission_pct = 0;
