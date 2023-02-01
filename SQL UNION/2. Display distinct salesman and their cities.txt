@@ -1,0 +1,9 @@
+2. From the following tables, write a SQL query to find distinct salespeople and their cities. Return salesperson ID and city.
+
+Ans-->
+
+SELECT salesman_id, city
+FROM customer
+UNION
+(SELECT salesman_id, city
+FROM salesman)
