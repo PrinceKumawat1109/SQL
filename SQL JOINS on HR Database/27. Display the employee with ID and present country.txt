@@ -1,0 +1,13 @@
+27. From the following tables, write a SQL query to find out the full name (first and last name) of the employee with an ID and the name of the country where he/she is currently employed.
+
+Ans-->
+
+SELECT first_name || ' ' || last_name 
+AS Employee_name, employee_id, country_name 
+FROM employees 
+JOIN departments 
+USING(department_id) 
+JOIN locations 
+USING( location_id) 
+JOIN countries 
+USING ( country_id);

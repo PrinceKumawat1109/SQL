@@ -1,0 +1,12 @@
+26. From the following tables, write a SQL query to find the department name, department ID, and number of employees in each department.
+
+Ans-->
+
+SELECT d.department_name,
+       e.*
+FROM departments d
+JOIN
+  (SELECT count(employee_id),
+          department_id
+   FROM employees
+   GROUP BY department_id) e USING (department_id);;
