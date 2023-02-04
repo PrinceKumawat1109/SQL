@@ -1,0 +1,14 @@
+7. From the following tables, write a SQL query that appends strings to the selected fields, indicating whether the city of any salesperson is matched with the city of any customer. Return salesperson ID, name, city, MATCHED/NO MATCH.
+
+Ans-->
+
+SELECT a.salesman_id, name, a.city, 'MATCHED'
+FROM salesman a, customer b
+WHERE a.city = b.city
+UNION
+(SELECT salesman_id, name, city, 'NO MATCH'
+FROM salesman
+WHERE NOT city = ANY
+	(SELECT city
+        FROM customer))
+ORDER BY 2 DESC
