@@ -1,0 +1,14 @@
+6. From the following tables, write a SQL query to find those salespeople who live in the same city where the customer lives as well as those who do not have customers in their cities by indicating 'NO MATCH'. Sort the result set on 2nd column (i.e. name) in descending order. Return salesperson ID, name, customer name, commission.
+
+Ans-->
+
+SELECT salesman.salesman_id, name, cust_name, commission
+FROM salesman, customer
+WHERE salesman.city = customer.city
+UNION
+(SELECT salesman_id, name, 'NO MATCH', commission
+FROM salesman
+WHERE NOT city = ANY
+	(SELECT city
+        FROM customer))
+ORDER BY 2 DESC
