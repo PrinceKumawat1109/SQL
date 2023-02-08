@@ -1,0 +1,7 @@
+2. From the following table, create a view for all salespersons. Return salesperson ID, name, and city.
+
+Ans-->
+
+CREATE VIEW salesown
+ AS SELECT salesman_id, name, city
+ FROM salesman;
