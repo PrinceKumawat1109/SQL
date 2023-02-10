@@ -1,0 +1,8 @@
+4. From the following table, create a view that counts the number of customers in each grade.
+
+Ans-->
+
+CREATE VIEW gradecount (grade, number)
+AS SELECT grade, COUNT(*)
+FROM customer
+GROUP BY grade;

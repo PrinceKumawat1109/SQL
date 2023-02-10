@@ -1,0 +1,8 @@
+3. From the following table, create a view to locate the salespeople in the city 'New York'.
+
+Ans-->
+
+CREATE VIEW newyorkstaff
+AS SELECT *
+FROM salesman
+WHERE city = 'New York';
