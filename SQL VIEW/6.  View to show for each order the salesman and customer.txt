@@ -1,0 +1,9 @@
+6. From the following tables, create a view to get the salesperson and customer by name. Return order name, purchase amount, salesperson ID, name, customer name.
+
+Ans-->
+
+CREATE VIEW nameorders
+AS SELECT ord_no, purch_amt, a.salesman_id, name, cust_name
+FROM orders a, customer b, salesman c
+WHERE a.customer_id = b.customer_id
+AND a.salesman_id = c.salesman_id;
