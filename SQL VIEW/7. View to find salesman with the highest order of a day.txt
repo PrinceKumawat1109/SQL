@@ -1,0 +1,10 @@
+7. From the following table, create a view to find the salesperson who handles a customer who makes the highest order of the day. Return order date, salesperson ID, name.
+
+CREATE VIEW elitsalesman
+AS SELECT b.ord_date, a.salesman_id, a.name
+FROM salesman a, orders b
+WHERE a.salesman_id = b.salesman_id
+AND b.purch_amt =
+    (SELECT MAX (purch_amt)
+       FROM orders c
+       WHERE c.ord_date = b.ord_date);
